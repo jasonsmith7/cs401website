@@ -1,9 +1,10 @@
 <div id="navigation">
 <ul>
-	<li><a href="|">Page One</a></li>
-	<li id="currentpage"><a href="|">Page Two</a>
+	<li id="currentpage"><a href="index.php">Home</a></li>
+	<li><a href="about.php">About</a>
 	</li>
-	<li><a href="|">Page Three</a></li>
-	<li><a href="|">Page Four</a></li>
+	<li><a href="|">Shop</a></li>
+	<li><a href="|">Events</a></li>
+	<li><a href="">Contact</a></li>
 </ul>
 </div>
