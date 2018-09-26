@@ -5,15 +5,13 @@
 
 <link href="style_home.css">
 <link href="login_html.html">
-<link rel="icon" href="http://icons.iconarchive.com/icons/icons8/ios7/512/Music-Guitar-icon.png">
+<link rel="icon" href="images/guitar_icon.png">
 <title>PHP Test</title>
 
 </head>
 <body>
 
 
-<?php echo "<body style='background-color:#FFEEAA'>";
-	  //echo '<p>Hello World</p>'; ?>
-<!--<div><img src="bg_guitar.jpeg"/></div>-->
+<?php echo "<body style='background-color:#FFEEAA'>"; ?>
 </body>
 </html>
