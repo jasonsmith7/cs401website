@@ -9,8 +9,11 @@ h1 > img{
 }
 	
 body {
-	background-color: #FFEEAA;
-	color: black;
+	font-family: 'Handlee';
+    font-size: 10pt;
+    background-color: #FFEEAA;
+    padding: 10px;
+    margin: 0;
 }
 .homeBody{
 	position: relative;
@@ -24,7 +27,7 @@ body {
 	background-color: #FFEEAA;
 	position: absolute;
 	top: 45%;
-	left: 26%;
+	left: 30%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	color: black;
@@ -122,11 +125,12 @@ body {
 
 .dropbtn{
 	background-color: black;
-	width: 120px;
+	width: 150px;
 	color: white;
-	padding: 15px;
-	font-size: 10px;
-	border: dotted;
+	padding: 11px 11px;
+	font-size: 16px;
+	border-style: ridge;
+	border-width: 3px;
 }
 .dropdown{
 	float: right;
@@ -137,35 +141,45 @@ body {
 	display: none;
 	position: absolute;
 	background-color: #FFEEAA;
-	min-width: 20px;
+	width: 150px;
 	z-index: 1;
 }
 .dropdown-content a {
     color: black;
-    padding: 2px 2px;
+    padding: 4px 4px;
     text-decoration: none;
     display: block;
-	border: solid;
-	width: 100%;
+	border: ridge;
+	border-width: 1px;
+	border-color: black;
+	width: 140px;
 	text-align: center;
 }
-.dropdown-content a:hover {background-color: white;}
+.dropdown-content a:hover {
+	background-color: black;
+	color:white
+}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: grey;}
+.dropdown:hover .dropbtn {
+	background-color: #FFEEAA;
+	color: black;
+}
 
 footer {
-	position: relative;
+	position: absolute;
 	height: 40px;
 	width: 100%;
-	background-color: #998855;
+	background-color: #654321;
+	bottom: 0px;
+	left: 0px;
 	
 }
 p.copyright {
 	position: absolute;
 	width: 100%;
 	color: #fff;
-	line-height: 40px;
-	font-size: 0.7em;
+	line-height: 20px;
+	font-size: 12px;
 	text-align: center;
 	bottom:0;
 }
@@ -173,6 +187,8 @@ p.copyright {
 /* Add padding to containers */
 .container {
   padding: 16px;
+  min-height: 100%;
+  margin-bottom: -40px;
 }
 .signin {
   background-color: #FFEEAA;
@@ -194,56 +210,59 @@ p.copyright {
   width: 280px;
 }
 
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+
+/*shop stuff*/
+buy_button {
+    background: linear-gradient( #fff, #ccc);
+    width: 148px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: -10px;
+    margin-left: 5.5px;
+    border: none;
+}
+buy_button:hover {
+    background: linear-gradient( #ccc, #fff);
+    text-shadow: 0 0 10px #fff;
+}
+.inset {
+    border-radius: 10px 10px 0 0;
+    height: 50%;
+}
+.first {
+    float: left;
+	text-align: center;
+}
+.second {
+    float: right;
+	text-align: center;
+}
+.third{
+    float: left;
+	text-align: center;
+}
+.fourth {
+    float: right;
+	text-align: center;
 }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+.section {
+    background-color: #FFEEAA;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
 }
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+.submit:hover {
+    background-color: #43a09d;
 }
