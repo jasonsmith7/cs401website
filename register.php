@@ -1,10 +1,10 @@
 <html>
-
-<?php require_once "shop_html.html"; ?>
-<head>
 <?php //require_once "nav.php"; ?>
+<?php require_once "register_html.html"; ?>
+<head>
+
 <link href="style_home.css">
-<link href="shop_html.html'>
+<link href="register_html.html">
 <link rel="icon" href="http://icons.iconarchive.com/icons/icons8/ios7/512/Music-Guitar-icon.png">
 <title>PHP Test</title>
 
