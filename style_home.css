@@ -12,8 +12,9 @@ body {
 	font-family: 'Handlee';
     font-size: 10pt;
     background-color: #FFEEAA;
-    padding: 10px;
-    margin: 0;
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 40px;
 }
 .homeBody{
 	position: relative;
@@ -166,12 +167,13 @@ body {
 }
 
 footer {
-	position: absolute;
+	position: fixed;
 	height: 40px;
+	left: 0;
+	bottom: 40px;
 	width: 100%;
 	background-color: #654321;
-	bottom: 0px;
-	left: 0px;
+	margin-bottom: -40px;
 	
 }
 p.copyright {
@@ -227,23 +229,15 @@ buy_button:hover {
 }
 .inset {
     border-radius: 10px 10px 0 0;
-    height: 50%;
+    width: 100%;
+	height: auto;
 }
 .first {
-    float: left;
+	
+    width: 50%;
+	padding: 10px;
 	text-align: center;
-}
-.second {
-    float: right;
-	text-align: center;
-}
-.third{
-    float: left;
-	text-align: center;
-}
-.fourth {
-    float: right;
-	text-align: center;
+	padding-left: 25%
 }
 
 .section {
