@@ -1,5 +1,6 @@
 h1 > img{
-	height: 60px;
+	width: 35%;
+	height: auto;
 	
 }
 .title{
@@ -137,6 +138,7 @@ body {
 	float: right;
 	position: relative;
 	display: inline-block;
+	width: 25%;
 }
 .dropdown-content{
 	display: none;
