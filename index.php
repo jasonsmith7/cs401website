@@ -7,6 +7,6 @@
 <title>Jay String Jewelry - Home</title>
 </head>
 <body>
-<?php echo "<body style='background-color:#FFEEAA'>";?>
+<?php echo "<body style='background-color:black'>";?>
 </body>
 </html>

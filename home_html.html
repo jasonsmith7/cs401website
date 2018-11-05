@@ -2,42 +2,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style_home.css" type="text/css" rel="stylesheet" />
-<header><title></title>
-<div class="dropdown">
-<button class="dropbtn">Menu</button>
-<div class="dropdown-content">
-	<a href="login.php">Log-in</a>
-	<a href="about.php">About</a>
-	<a href="shop.php">Shop</a>
-	<a href="events.php">Events</a>
-	<a href="contact.php">Contact</a>
-</div>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+	<script src="login.js"></script>
+</head>
+<header id="home"><title></title>
+	<div class="dropdown">
+		<button class="dropbtn">Menu</button>
+		<div class="dropdown-content">
+			<a href="login.php">Log-in</a>
+			<a href="register.php">Register</a>
+	</form>
+			<a href="#about">About</a>
+			<a href="#shop">Shop</a>
+			<a href="#events">Events</a>
+			<a href="#contact">Contact</a>
+		</div>
 	</div>
-		<h1>
-		
-		<img src="logo.jpeg"/>
-		
-		<p class="title">Jay String Jewelry</p>
-		</h1>
-</header>
-<body>
-<div class="homeBody">
-	<img src="bg_guitar.jpeg">
-	<a href="login.php">
-	<button class="btn1">Log in</button></a>
-	<a href="about.php">
-	<button class="btn2">About</button></a>
-	<a href="shop.php">
-	<button class="btn3">Shop</button></a>
-	<a href="events.php">
-	<button class="btn4">Events</button></a>
-	<a href="contact.php">
-	<button class="btn5">Contact</button></a>
-</div> 
+	<h1>
+		<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></header></p>
+	</h1>
+<div class="sticky"><a href="#home">Back to Top</a></div>
+<body class ="body">
+	
+	<div id="about" class="first">
+	<div class="second"> 
+		<p>Jay is a student at Boise State University and intern at Micron Technology.
+		Seeking an outlet for his creative energy, Jay saved his old bonfire guitar
+		strings and began crafting these unique wearables. Jay's jewelry is made from
+		100% authentic guitar strings.<hr></p>
+		<p><a href="#shop">Help Jay pay off his student loans!!!!!</a></p>
+	</div>
+	</div>
+	<div id="shop" class="second"> Shop </div>
+	<div>
+	<table style="width:100%" class="deets">
+		<tr>
+			<td align="center">LOOPS</td>
+			<td align="center">HOOPS</td> 
+		</tr>
+		<tr>
+			<td align="center"><img class="inset" alt="one" src="images/one.jpg"></td>
+			<td align="center"><img class="inset" alt="two" src="images/two.jpg"></td> 
+		</tr>
+		<tr>
+			<td align="center"><p class="deets">Price: $15 <buy_button id="_1"><a href="#contact">I Want That!</a></buy_button></p></td>
+			<td align="center">Price: $15 <buy_button id="_2"><a href="#contact">I Want That!</a></buy_button></td> 
+		</tr>
+		<tr>
+			<td align="center">SWOOPS</td>
+			<td align="center">DROOPS</td> 
+		</tr>
+	    <tr>
+			<td align="center"><img class="inset" alt="three" src="images/three.jpg"></td>
+			<td align="center"><img class="inset" alt="four" src="images/four.jpg"></td>
+		</tr>
+		<tr>
+			<td align="center">Price: $15 <buy_button id="_3"><a href="#contact">I Want That!</a></buy_button></td>
+			<td align="center">Price: $15 <buy_button id="_4"><a href="#contact">I Want That!</a></buy_button></td>
+		</tr>
+	</table>
+	<div class="deets" id="events">Events
+	<iframe align="middle" width="100%" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23000000&amp;src=jtsmithers%40gmail.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FDenver" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>   	</div>	
+	</div>
+	<div class="second" id="contact">Contact
+	<p class="second">Leave a comment or request a product</p>
+	<p class="second">Please leave a comment about Jay or his products. If there is a concern, Jay will
+	get back to you promptly.</p>
+	<p class="second">If you are requesting a product, please select the product from the drop-down.</p>
+	<form class="bg" align="center" width="100%" class="first">
+		<br><input placeholder="name"name="name" type="text" /><br/>
+		<br><input placeholder="email address:"name="email" type="email" /><br/>
+		<br align="middle">What product do you want??</br>
+		<br>
+			<input type="checkbox" name="LOOPS" /> LOOPS
+			<input type="checkbox" name="HOOPS" /> HOOPS
+			<input type="checkbox" name="SWOOPS" /> SWOOPS
+			<input type="checkbox" name="DROOPS" /> DROOPS
+		</br>
+		<br><textarea placeholder="Type Your Message:"name="message" rows="10" cols="80"></textarea></br>
+		<input type="submit" value="SEND" class="submit" />
+	</form>
+	</div>
+	<footer class="footer"> 
+	<p class="copyright">© 2018 Jay String Jewelry, LLC</p>
+    </footer>
 </body>
-<footer class="footer">
-    <div class="footerContainer">
-        <p class="copyright">© 2018 Jay String Jewelry, LLC</p>
-    </div>
-</footer>
+
 </html>
