@@ -8,16 +8,9 @@
 </head>
 <header><title></title>
 
-<div class="dropdown">
-	<button class="dropbtn">Menu</button>
-	<div class="dropdown-content">
-		<a href="register.php">Register</a>
-		<a href="index.php#about">About</a>
-		<a href="index.php#shop">Shop</a>
-		<a href="index.php#events">Events</a>
-		<a href="index.php#contact">Contact</a>
-	</div>
-</div>
+<?php
+	include("menu.php");
+	?>
 <h1>
 	<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
 	<p class="title"></p>
@@ -34,7 +27,7 @@
         <input type="password" name="password" id="password" value=""/>
       </div>
       <div>
-        <input type="submit" name="submit" id="login" value="Login"/>
+        <input type="submit" name="submit" id="login" value="login"/>
       </div><a href="register.php"></a>
     </form>
 	<footer class="footer"> 

@@ -1,38 +1,57 @@
 <?php
 session_start();
 
-// For simplification Lets pretend I got these login credentials from an SQL table.
 require_once "Dao.php";
 
 $dao = new Dao();
+$email = $_REQUEST["email"]; 
+$password = $_REQUEST["password"];
+$user = $dao->login($email);
 
-if(isset($_POST["email"], $_POST["password"])) 
-    {     
-		 echo 'made it 1';
-        $email = $_POST["email"]; 
-        $password = $_POST["password"]; 
-
-        
-
-        if(mysqli_num_rows($dao->validateCreds($email,$password)) > 0 )
-        { 
-             echo 'made it 2';
-			$_SESSION["logged_in"] = true; 
-            header('Location: contact.php');
-			exit;
-        }
-        else
-        {
-            echo 'The username or password are incorrect!';
-			$status = "Invalid username or password";
-			$_SESSION["status"] = $status;
-			$_SESSION["email_preset"] = $_POST["email"];
-			$_SESSION["access_granted"] = false;
-			exit;
-        }
+$valid = true;
+$messages = array();
+if (empty($username)) {
+	$messages[] = "PLEASE ENTER A VALID EMAIL";
+	$valid = false;
 }
- echo 'no';
- exit;
+if (empty($password)){
+	$messages[] = "PLEASE ENTER A PASSWORD";
+	$valid = false;
+}
+if (!$user){
+	$messages[] = "User does not exist";
+	$valid = false;
+}else{
+	$user = $dao->getUser($email);
+	$pass = $dao->getPassword($email);
+	error_log(" UserID from Dao: " . $email);
+	#error_log(" Password from Post: " . $password);
+	error_log(" Password from Post: " . $password);
+	error_log(" Password from Dao: " . $pass);
+	if($password != $pass){
+		$messages[] = "Incorrect Password";
+		echo "bad password";
+		$valid = false;
+	} else{
+		$messages[] = "Welcome $email";
+		$_SESSION['currentUser'] = $email;
+		$valid = true;
+	}
+}
+ 
+  if (!$valid) {
+    $_SESSION['sentiment'] = "bad";
+    $_SESSION['messages'] = $messages;
+	header("Location: login.php");
+    exit;
+  }
+  
+  $_SESSION['sentiment'] = "good";
+  
+  header("Location: index.php");
+  exit;
+  
+  ?>
 
 
 

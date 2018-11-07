@@ -1,0 +1,91 @@
+now - INFO  --> checking login for [jtsmithers@gmail.com] 
+
+now - INFO  --> checking login for [jtsmithers@gmail.com] 
+
+now - INFO  --> returned [Array] 
+
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => jtsmithers@gmail.com
+            [password] => test
+        )
+
+)
+ 
+
+now - INFO  --> checking login for [jtsmithers@gmail.com] 
+
+now - INFO  --> returned [Array] 
+
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => jtsmithers@gmail.com
+            [password] => test
+        )
+
+)
+ 
+
+now - INFO  --> checking login for [test@test.com] 
+
+now - INFO  --> returned [Array] 
+
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => test@test.com
+            [password] => test
+        )
+
+)
+ 
+
+
+now - INFO  --> checking login for [jtsmithers@gmail.com] 
+now - INFO  --> !empty(Array) 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => jtsmithers@gmail.com
+            [password] => test
+        )
+
+)
+ 
+now - INFO  --> checking login for [jtsmithers@gmail.com] 
+now - INFO  --> !empty(Array) 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => jtsmithers@gmail.com
+            [password] => test
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => test
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => test
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => test
+)
+ 

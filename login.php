@@ -8,6 +8,9 @@ if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
   if (isset($_SESSION["email_preset"])) {
     $email = $_SESSION["email_preset"];
   }
+if (!empty($_SESSION['sentiment'])) {
+    		echo $_SESSION["sentiment"];
+}
 ?>
 
 
@@ -22,10 +25,11 @@ if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
 </head>
 <body>
 <?php
-    if (isset($_SESSION["status"])) {
-      echo '<div id=\"status"\>' .  $_SESSION["status"] . "</div>";
-      unset($_SESSION["status"]);
+    if (isset($_SESSION["sentiment"])) {
+      echo '<div id=\"sentiment"\>' .  $_SESSION["sentiment"] . "</div>";
+      unset($_SESSION["sentiment"]);
     }
     ?>
+	<a href="logout.php">Logout</a>
 </body>
 </html>

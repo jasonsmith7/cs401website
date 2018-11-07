@@ -75,7 +75,6 @@ h1 > img{
 	display: inline-block;
 	width: 25%;
 }
-
 .dropdown-content{
 	display: none;
 	position: absolute;
@@ -236,7 +235,18 @@ form.bg {
 	min-height: 10%;
 	Margin-bottom: 30px;
 }
-
+div.sticky {
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+	right: 0;
+	text-align: right;
+    background-color: black;
+	font-family: 'Baloo Bhaijaan', cursive;
+	color:white;
+    padding: 10px;
+    font-size: 20px;
+}
 .second {
 	background-color:black;
 	font-family: 'Baloo Bhaijaan', cursive;
