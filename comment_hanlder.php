@@ -3,8 +3,9 @@ session_start();
 require_once "Dao.php";
 $dao = new Dao();
 
+$name = $_REQUEST["name"];
 $email = $_REQUEST["email"]; 
-$password = $_REQUEST["password"]; 
+$ = $_REQUEST["password"]; 
 $valid = true;
 $messages = array();
 $user = $dao->login($email);

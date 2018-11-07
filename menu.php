@@ -4,7 +4,7 @@
 		<?php 
 		if (!empty($_SESSION['sentiment'])) {
     		if($_SESSION["sentiment"] == "good"){ 
-				echo '<a href="logout.php">LOGOUT</a>';
+				echo '<a href="index.php">Logout</a>';
 			}else{
 				echo '<a href="login.php">Login</a>'; 
 			}

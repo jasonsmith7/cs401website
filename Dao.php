@@ -1,4 +1,5 @@
 <?php
+//dao.php
 require_once 'KLogger.php';
 class Dao {
 	private $host = "us-cdbr-iron-east-01.cleardb.net";
@@ -14,9 +15,9 @@ class Dao {
 		return new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->pass);
 	}
 	
-	public function saveComment ($comment) {
+	public function saveComment ($name, $email, $product, $comment) {
 		$conn = $this->getConnection();
-		$saveQuery = "INSERT INTO comments (comment) VALUES (:comment)";
+		$saveQuery = "INSERT INTO contact (comment) VALUES (:comment)";
 		$q = $conn->prepare($saveQuery);
 		$q->bindParam(":comment", $comment);
 		$q->execute();
@@ -32,7 +33,7 @@ class Dao {
 		
 		#$this->logger->logInfo(__FUNCTION__ . " " . print_r($ret,1));
 		$temp = !empty($ret);
-		$this->logger->LogInfo("/nbool returned [{$temp}]");
+		#$this->logger->LogInfo("/nbool returned [{$temp}]");
 		return !empty($ret);
 	 }
 	 public function getUser($email){
@@ -44,7 +45,7 @@ class Dao {
      $results = $query->fetch();
 		 
      //$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-	 error_log(" GET UserID REsult: " . print_r($results,true));
+	 #error_log(" GET UserID REsult: " . print_r($results,true));
      return $results['email'];
 	  
   }

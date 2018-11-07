@@ -15,6 +15,22 @@
 <h1>
 	<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
 </h1>
+<div class="third"><?php 
+		if (!empty($_SESSION['sentiment'])) {
+    		if($_SESSION["sentiment"] == "good"){ 
+				$email = $_SESSION["currentUser"];
+				echo "<p><strong>" . 'Hello ' . $email . "</strong></p>";
+				//echo $email;
+				echo '<a href="logout.php">LOGOUT</a>';
+			}else{
+				echo "<p><strong>" . 'Not Logged In' . "</strong></p>";
+				echo '<a href="login.php">Login</a>';
+				
+			}
+		}else{
+			echo '<a href="login.php">Login</a>'; 
+		}
+		?></div>
 <div class="sticky"><a href="#home">Back to Top</a></div>
 <body class ="body">
 <table>
@@ -79,9 +95,8 @@
 			<input type="checkbox" name="HOOPS" /> HOOPS
 			<input type="checkbox" name="SWOOPS" /> SWOOPS
 			<input type="checkbox" name="DROOPS" /> DROOPS
-		
-		<textarea class="ta" rows="5">Leave a comment!!!</textarea></br>
-		<input type="submit" value="SEND" class="submit" />
+			<textarea class="ta" rows="5">Leave a comment!!!</textarea></br>
+			<input type="submit" value="SEND" class="submit" />
 	</form>
 	</div>
 	<footer class="footer"> 

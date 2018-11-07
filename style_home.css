@@ -8,6 +8,13 @@ h1 > img{
 	position: absolute;
 }
 
+.message {
+	color: red;
+	font-size: 36px;
+	text-align: center;
+	font-family: 'Baloo Bhaijaan', cursive;
+}
+
 .deets {
 	color: white;
 	font-family: 'Baloo Bhaijaan', cursive;

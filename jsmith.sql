@@ -8,14 +8,13 @@ CREATE TABLE users (
 	PRIMARY KEY (email)
 );
 
-CREATE TABLE comments (
-	comment_id		INT				NOT NULL,
-	user_id			INT				NOT NULL,
-	product_id		INTEGER,
-	user_comment	VARCHAR(144)	NOT NULL,
-	PRIMARY KEY	(comment_id),
-	FOREIGN KEY	(user_id) REFERENCES users(user_id),
-	FOREIGN KEY (product_id) REFERENCES products(product_id)
+CREATE TABLE contact (
+	name		VARCHAR(14)		NOT NULL,
+	email		VARCHAR(100)	NOT NULL,
+	product_name 	ENUM('LOOPS','HOOPS', 'SWOOPS', 'DROOPS'),
+	comment		VARCHAR(144)	NOT NULL,
+	PRIMARY KEY	(comment),
+	FOREIGN KEY	(email) REFERENCES users(email)
 );
 
 CREATE TABLE user_info (

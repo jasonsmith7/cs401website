@@ -1,14 +1,6 @@
 <?php
-// granted.php
+// logout.php
 session_start();
-
-if (isset($_SESSION["access_granted"]) && !$_SESSION["access_granted"] ||
-   !isset($_SESSION["access_granted"])) {
-  $_SESSION["sentiment"] = "You need to log in first";
-  header("Location:login.php");
-}
-
-echo "ACCESS GRANTED";
+session_destroy();
+header("Location:index.php");
 ?>
-  
-<a href="logout.php">Logout</a>
