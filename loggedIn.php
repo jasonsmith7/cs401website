@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <html>
 <?php require_once "home_html.html"; ?>
 <head>

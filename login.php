@@ -1,7 +1,13 @@
 <?php
 session_start();
-$prompt = isset($_SESSION['prompt']) ? $_SESSION['prompt'] : '';
-unset($_SESSION['prompt']);
+if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
+    header("Location:granted.php");
+  }
+
+  $email = "";
+  if (isset($_SESSION["email_preset"])) {
+    $email = $_SESSION["email_preset"];
+  }
 ?>
 
 
@@ -15,6 +21,11 @@ unset($_SESSION['prompt']);
 <title>Jay String Jewelry - Log In</title>
 </head>
 <body>
-<?php echo "<body style='background-color:black'>";?>
+<?php
+    if (isset($_SESSION["status"])) {
+      echo '<div id=\"status"\>' .  $_SESSION["status"] . "</div>";
+      unset($_SESSION["status"]);
+    }
+    ?>
 </body>
 </html>

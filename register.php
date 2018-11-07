@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+
+
+
+if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
+    header("Location:granted.php");
+  }
+
+  $email = "";
+  if (isset($_SESSION["email_preset"])) {
+    $email = $_SESSION["email_preset"];
+  }
+?>
+
 <html>
 <?php require_once "register_html.html"; ?>
 <head>
@@ -7,6 +23,5 @@
 <title>Jay String Jewelry - Register</title>
 </head>
 <body>
-<?php echo "<body style='background-color:#FFEEAA'>";?>
 </body>
 </html>

@@ -3,10 +3,9 @@
  */
 
 CREATE TABLE users (
-	user_id		INT				NOT NULL,
 	email		VARCHAR(100)	NOT NULL,
 	password	VARCHAR(20)		NOT NULL,
-	PRIMARY KEY (user_id)
+	PRIMARY KEY (email)
 );
 
 CREATE TABLE comments (

@@ -4,7 +4,7 @@
 <link href="style_home.css" type="text/css" rel="stylesheet" />
 <head>
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
-<script src="login.js"></script>
+
 </head>
 <header><title></title>
 
@@ -20,16 +20,23 @@
 </div>
 <h1>
 	<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
-	<p class="title">Log In</p>
+	<p class="title"></p>
 </h1>
 </header>
 <body class="body">
-    <form class="bg" method ="post" align="center" action="login_handler.php">
-            Username</br><input type="text" name="Username"></br>
-            Password</br><input type="password" name="Password"></br></br>
-            <input type="submit" value="Submit">
-			<a href="register.php">Register</a>
-	</form>
+    <form align="center" class="bg" action="login_handler.php" method="POST">
+      <div>
+        <br><label for="email" align="middle">Email</label></br>
+        <input type="text" name="email" id="email" value="<?php echo $email; ?>"/>
+      </div>
+      <div>
+       <br><label for="password">Password</label></br>
+        <input type="password" name="password" id="password" value=""/>
+      </div>
+      <div>
+        <input type="submit" name="submit" id="login" value="Login"/>
+      </div><a href="register.php"></a>
+    </form>
 	<footer class="footer"> 
 	<p class="copyright">© 2018 Jay String Jewelry, LLC</p>
 	</footer>

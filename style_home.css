@@ -17,7 +17,7 @@ h1 > img{
 	font-size: 36px;
 	text-align: center;
 	position: static;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Baloo Bhaijaan', cursive;
 	/*background-color: black;*/
 }
 	
@@ -75,6 +75,7 @@ h1 > img{
 	display: inline-block;
 	width: 25%;
 }
+
 .dropdown-content{
 	display: none;
 	position: absolute;
@@ -159,6 +160,7 @@ p.copyright {
   background-color: black;
   color: white;
   text-align: center;
+  opacity: 0.8;
 }
 {box-sizing: border-box;}
 
@@ -230,29 +232,39 @@ form.bg {
 	padding-bottom: 10px;
 	margin: 0 auto -10px;
 	height: auto;
-	
+	text-align: center;
 	min-height: 10%;
-	Margin-bottom: 60px;
+	Margin-bottom: 30px;
 }
-div.sticky {
-    position: -webkit-sticky;
-    position: fixed;
-    top: 0;
-	right: 0;
-	text-align: right;
-    background-color: black;
-	font-family: 'Baloo Bhaijaan', cursive;
-	color:white;
-    padding: 10px;
-    font-size: 20px;
-}
+
 .second {
 	background-color:black;
 	font-family: 'Baloo Bhaijaan', cursive;
 	opacity: 0.8;
 	width: 100%;
 	padding: 10px;
+	text-align: middle;
 	}
+.third {
+background-color:black;
+	font-family: 'Baloo Bhaijaan', cursive;
+	opacity: 0.7;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+
+}
+
+textarea.ta {
+	width: 80%;
+    rows: 6;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
 
 .section {
     background-color: black;
