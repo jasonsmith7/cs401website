@@ -30,6 +30,6 @@ if (!empty($_SESSION['sentiment'])) {
       unset($_SESSION["sentiment"]);
     }
     ?>
-	<a href="logout.php">Logout</a>
+	<a href="logout.php">Cancel</a>
 </body>
 </html>
