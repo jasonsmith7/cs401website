@@ -44,7 +44,7 @@ if(!isset($error_message)) {
 if (!$valid) {
 	$_SESSION['sentiment'] = "bad";
 	$_SESSION['messages'] = $messages;
-	header("Location: newUser.php");
+	header("Location: register.php");
 	exit;
 }
 $_SESSION['sentiment'] = "good";

@@ -5,6 +5,7 @@
 <link href="style_home.css" type="text/css" rel="stylesheet" />
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
 	<link href="home.js">
 	<link rel="stylesheet" href="css/wow-alert.css">
 
@@ -17,7 +18,7 @@
 <h1>
 	<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
 </h1>
-<div class="third"><?php 
+<div class="second"><?php 
 		if (!empty($_SESSION['sentiment'])) {
     		if($_SESSION["sentiment"] == "good"){ 
 				$email = $_SESSION["currentUser"];
@@ -29,7 +30,7 @@
 				echo '<a href="login.php">Login</a>';
 			}
 		}else{
-			echo '<a href="login.php">Login</a>'; 
+			echo '<div class="left"><a href="login.php">Login</a></div>' . '<div class="right"><a href="register.php">Register</a></right>'; 
 		}
 		?></div>
 <div class="sticky"><a href="#home">Back to Top</a></div>
@@ -40,7 +41,7 @@
       echo "<tr><td>" . htmlentities($user['email']) . "  </td><td>" . ($user['password']) . "</td></tr>";
     }
 ?></table>-->
-	<div id="about" class="second"></div>
+	<div id="about" class="secondTitle">About Jay and His Jewelry</div>
 	<div class="second"> 
 		<p>Jay is a student at Boise State University and intern at Micron Technology.
 		Seeking an outlet for his creative energy, Jay saved his old bonfire guitar
@@ -49,7 +50,7 @@
 		<p><a href="#shop">Help Jay pay off his student loans!!!!!</a></p>
 	</div>
 	
-	<div id="shop" class="second"> Shop </div>
+	<div id="shop" class="secondTitle"> Shop </div>
 	<div>
 	<table style="width:100%" class="deets">
 		<tr>
@@ -89,7 +90,7 @@
 			</td>
 		</tr>
 	</table>
-	<div class="second" id="events">Events</div>
+	<div class="secondTitle" id="events">Events</div>
 	<div class="second">Watch here for upcoming events where you can see Jay out and about!</div>
 	<div class="second">Talk to him, buy some jewelry, shake his hand even...</div>
 	<div class="second"><iframe align="middle" width="100%" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23000000&amp;src=jtsmithers%40gmail.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FDenver" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>   	</div>	
