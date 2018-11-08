@@ -253,6 +253,8 @@ table,td {
 	opacity: 0.8;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	border:solid;
+	border-color:white;
 	font-size:50pt;
 	width: 100%;
 	padding: 10px;
