@@ -5,26 +5,36 @@ $dao = new Dao();
 
 $name = $_REQUEST["name"];
 $email = $_REQUEST["email"]; 
-$ = $_REQUEST["password"]; 
+$product = $_REQUEST["product"]; 
+$comment = $_REQUEST["comment"];
+
 $valid = true;
 $messages = array();
-$user = $dao->login($email);
+#$user = $dao->login($email);
 
+if (empty($name)) {
+	$messages[] = "PLEASE ENTER AN ALIAS";
+	#$valid = false;
+}
 if (empty($email)) {
 	$messages[] = "PLEASE ENTER A VALID EMAIL ADDRESS";
-	$valid = false;
+	#$valid = false;
 }
 if (empty($password)){
 	$messages[] = "PLEASE ENTER A PASSWORD";
-	$valid = false;
+	#$valid = false;
 }
-if (!$user) {
-	$dao->createUser($email, $password);
+if (empty($comment)) {
+	$messages[] = "PLEASE ENTER A COMMENT";
+	#$valid = false;
+}
+if ($valid) {
+	$dao->saveComment ($name, $email, $product, $comment);
 	$messages[] = "User $email Created";
 	$_SESSION['currentUser'] = $email;
 	$valid = true;
 }else{
-	$messages[] = "Account already associated with $username";
+	#$messages[] = "Account already associated with $username";
 	$valid = false;
   }
 /* Form Required Field Validation */
@@ -45,7 +55,7 @@ if(!isset($error_message)) {
 if (!$valid) {
 	$_SESSION['sentiment'] = "bad";
 	$_SESSION['messages'] = $messages;
-	header("Location: newUser.php");
+	header("Location: index.php");
 	exit;
 }
 $_SESSION['sentiment'] = "good";

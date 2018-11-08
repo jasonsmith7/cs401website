@@ -3,6 +3,7 @@ session_start();
 require_once 'Dao.php';
 $dao = new Dao();
 $users = $dao->getUsers();
+$comments = $dao->getComments();
 ?>
 <html>
 

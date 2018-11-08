@@ -17,11 +17,16 @@ class Dao {
 	
 	public function saveComment ($name, $email, $product, $comment) {
 		$conn = $this->getConnection();
-		$saveQuery = "INSERT INTO contact (comment) VALUES (:comment)";
+		$saveQuery = "INSERT INTO contact (name, email, product, comment) VALUES (:name, :email, :product, :comment)";
 		$q = $conn->prepare($saveQuery);
+		$q->bindParam(":name", $name);
+		$q->bindParam(":email", $email);
+		$q->bindParam(":product", $product);
 		$q->bindParam(":comment", $comment);
+		$q->setFetchMode(PDO::FETCH_ASSOC);
 		$q->execute();
 	}
+
 	public function login($email){
 		#$this->logger->LogInfo("checking login for [{$email}]");
 		$conn = $this->getConnection();
@@ -56,12 +61,12 @@ class Dao {
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
-		$this->logger->LogInfo(" GET Password REsult: " . print_r($results,true));
+		#$this->logger->LogInfo(" GET Password REsult: " . print_r($results,true));
 		return $results['password'];
 	}
 	public function getComments () {
 		$conn = $this->getConnection();
-		return $conn->query("SELECT * FROM comment");
+		return $conn->query("SELECT * FROM contact");
 	}
 	public function getUsers () {
 		$conn = $this->getConnection();
@@ -70,7 +75,7 @@ class Dao {
 	
 	public function createUser ($email, $password) {
 		$conn = $this->getConnection();
-		$query = $conn->prepare("INSERT INTO Users (email, password) values (:email, :password)");
+		$query = $conn->prepare("INSERT INTO users (email, password) values (:email, :password)");
 		$query->bindParam(":email", $email);
 		$query->bindParam(":password", $password);
 		$query->setFetchMode(PDO::FETCH_ASSOC);
