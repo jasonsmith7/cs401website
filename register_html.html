@@ -5,22 +5,16 @@
 <head><link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
 
 </head>
-<header><title></title>
-<div class="dropdown">
-	<button class="dropbtn">Menu</button>
-	<div class="dropdown-content">
-		<a href="index.php">Home</a>
-		<a href="about.php">About</a>
-		<a href="shop.php">Shop</a>
-		<a href="events.php">Events</a>
-		<a href="contact.php">Contact</a>
-	</div>
-</div>
+<header id="home"><title></title>
+	<?php
+	include("menu.php");
+	?>
+</header>
 <h1>
 	<div class="title"><p><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
 	<p class="second">Create An Account</p></div>
 </h1>
-</header>
+
 <body class="body">
         <div class="second"><form method ="POST" align="center" name="register" action="register_handler.php">
             <label>Email</label>
