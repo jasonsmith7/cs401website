@@ -6,6 +6,8 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
 	<link href="home.js">
+	<link rel="stylesheet" href="css/wow-alert.css">
+
 </head>
 <header id="home"><title></title>
 	<?php
@@ -61,14 +63,11 @@
 		<tr>
 			<td align="center">
 			<p class="deets">Price: $15 </p>
-			<div class="popup" onclick="myFunction()">I Want That!
-			<div class="popuptext" id="myPopup">Sorry...Out of Stock!</div>
+			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
 			</div>
 			</td>
 			<td align="center">Price: $15 </p>
-			<div class="popup" onclick="myFunction()">I Want That!
-			<div class="popuptext" id="myPopup">Sorry...Out of Stock!</div>
-			</div>
+			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
 			</td>
 		</tr>
 		<tr>
@@ -81,13 +80,11 @@
 		</tr>
 		<tr>
 			<td align="center">Price: $15 </p>
-			<div class="popup" onclick="myFunction()">I Want That!
-			<span class="popuptext" id="myPopup">Sorry...Out of Stock!</span>
+			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
 			</div>
 			</td>
 			<td align="center">Price: $15 </p>
-			<div class="popup" onclick="myFunction()">I Want That!
-			<span class="popuptext" id="myPopup">Sorry...Out of Stock!</span>
+			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
 			</div>
 			</td>
 		</tr>
@@ -125,13 +122,10 @@
 	<footer class="footer"> 
 	<p class="copyright">© 2018 Jay String Jewelry, LLC</p>
     </footer>
-	<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
-</script>
+	
 </body>
 
 </html>
+<script src="//code.jquery.com/jquery-2.1.3.js"></script>
+<script src="js/wow-alert.js"></script>
+<script>function wow_default_alert () {alert("Sorry...Out of Stock!");}</script>
