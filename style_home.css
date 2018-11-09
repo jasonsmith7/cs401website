@@ -139,7 +139,7 @@ h1 > img{
 	margin-top: -10px;
 	width=100%;
 	background-color: #666666;
-	margin-bottom:0px;
+	margin-bottom:-10px;
 	color: white;
 	height: 50px;
 	line-height: 50px;
@@ -253,9 +253,7 @@ table,td {
 	opacity: 0.8;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border:solid;
-	border-color:white;
-	font-size:50pt;
+	font-size:45pt;
 	width: 100%;
 	padding: 10px;
 	text-align: center;

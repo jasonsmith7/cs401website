@@ -24,12 +24,9 @@ if (!empty($_SESSION['sentiment'])) {
 <title>Jay String Jewelry - Log In</title>
 </head>
 <body>
-<?php
-    if (isset($_SESSION["sentiment"])) {
-      echo '<div id=\"sentiment"\>' .  $_SESSION["sentiment"] . "</div>";
-      unset($_SESSION["sentiment"]);
-    }
-    ?>
-	
+
 </body>
+<footer class="footer"> 
+	<p class="copyright">© 2018 Jay String Jewelry, LLC</p>
+	</footer>
 </html>
