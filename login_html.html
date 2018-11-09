@@ -27,14 +27,16 @@
         <input type="password" name="password" id="password" value=""/>
       </div>
       <div>
-        <br><input type="submit" name="submit" id="login" value="login"/></br>
+        <br><input class="buy_button" type="submit" name="submit" id="login" value="login"/></br>
       </div><a href="register.php"></a>
-   <!-- 
-	<?php if(isset($_SESSION['messages'])){
-			echo "<strong>" . $_SESSION['messages'][0] . "</strong>";
+    
+
+			<?php if(isset($_SESSION['messages'])){
+			echo "<strong class='error'>" . $_SESSION['messages'][0] . "</strong>";
 			unset($_SESSION['messages']);
 	}
-	?>--></form>
+	?>
+	</form>
 	
 </body>
 

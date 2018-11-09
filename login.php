@@ -1,16 +1,16 @@
 <?php
 session_start();
-if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
-    header("Location:granted.php");
-  }
+#if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
+ #   header("Location:granted.php");
+  #}
 
   $email = "";
   if (isset($_SESSION["email_preset"])) {
     $email = $_SESSION["email_preset"];
   }
-if (!empty($_SESSION['sentiment'])) {
-    		echo $_SESSION["sentiment"];
-}
+#if (!empty($_SESSION['sentiment'])) {
+ #   		echo $_SESSION["sentiment"];
+#}
 ?>
 
 
