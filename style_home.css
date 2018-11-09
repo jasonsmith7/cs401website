@@ -81,6 +81,7 @@ h1 > img{
 	position: absolute;
 	display: inline-block;
 	width: 25%;
+	font-family: 'Fredoka One', cursive;
 }
 .dropdown-content{
 	display: none;
@@ -137,7 +138,7 @@ h1 > img{
 }
 .footer {
 	margin-top: -10px;
-	width=100%;
+	width: 100%;
 	background-color: #666666;
 	margin-bottom:-10px;
 	color: white;
