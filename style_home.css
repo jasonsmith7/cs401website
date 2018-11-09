@@ -139,7 +139,8 @@ h1 > img{
 .footer {
 	margin-top: -10px;
 	width: 100%;
-	background-color: #666666;
+	background-color:black;
+	opacity: 0.8;
 	margin-bottom:-10px;
 	color: white;
 	height: 50px;
@@ -149,11 +150,14 @@ h1 > img{
 p.copyright {
 	
 	width: 100%;
-	color: #fff;
+	color: white;
+	background-color:black;
+	opacity: 0.8;
 	line-height: 10px;
 	font-size: 16px;
 	text-align: center;
 	padding-top:20px;
+	font-family: 'Fredoka One', cursive;
 	bottom:0;
 }
 

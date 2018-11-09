@@ -13,18 +13,19 @@
 </header>
 <h1>
 	<p class="title"><a href="index.php"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></a></p>
-	<p class="title"></p>
+	
+	<p class="second">Login to Your Account</p></div>
 </h1>
 
 <body class="body">
-    <form align="center" class="bg" action="login_handler.php" method="POST">
+    <div class="second"><form align="center" class="bg" action="login_handler.php" method="POST">
       <div>
-        <br><label for="email" align="middle">Email</label></br>
-        <input type="text" name="email" id="email" value="<?php echo $email; ?>"/>
+        <label for="email"  align="middle">Email</label>
+        <div><input type="text" name="email" id="email" placeholder="123@gmail.com" value="<?php echo $email; ?>"/></div>
       </div>
       <div>
-       <br><label for="password">Password</label></br>
-        <input type="password" name="password" id="password" value=""/>
+       <label for="password">Password</label>
+        <div><input type="password" placeholder="password" name="password" id="password" value=""/></div>
       </div>
       <div>
         <br><input class="buy_button" type="submit" name="submit" id="login" value="login"/></br>
@@ -37,7 +38,8 @@
 	}
 	?>
 	</form>
-	
+	<p class="signin">Don't have an account? <a href="register.php">Create one</a>.</p>
+	</div>
 </body>
 
 </html>

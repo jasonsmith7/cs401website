@@ -8,9 +8,8 @@ $comments = $dao->getComments();
 <html>
 
 <?php require_once "home_html.html"; 
-if (!empty($_SESSION['sentiment'])) {
-    		echo $_SESSION["sentiment"];
-}?>
+
+?>
 <head>
 <link href="style_home.css">
 <link href="home_html.html">
