@@ -9,7 +9,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 	<link href="home.js">
 	<link rel="stylesheet" href="css/wow-alert.css">
-
+	<link rel="json" href="gallery.json">
+	<link rel="stylesheet" href="swipebox-master/src/css/swipebox.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="galleria-1.5.7/galleria/galleria-1.5.7.min.js"></script>
+	
 </head>
 <header id="home"><title></title>
 	<?php
@@ -23,9 +27,9 @@
 		if (!empty($_SESSION['sentiment'])) {
     		if($_SESSION["sentiment"] == "good"){ 
 				$email = $_SESSION["currentUser"];
-				echo "<p><strong>" . 'Hello ' . $email . "</strong></p>";
-				//echo $email;
+				echo "<p><strong>" . 'Hello ' . $email . '. You are welcome for being here!' . "</strong></p>";
 				echo '<a href="logout.php">LOGOUT</a>';
+				include("contact.php");
 			}else{
 				echo "<p><strong>" . 'Not Logged In' . "</strong></p>";
 				echo '<a href="login.php">Login</a>';
@@ -42,6 +46,11 @@
       echo "<tr><td>" . htmlentities($user['email']) . "  </td><td>" . ($user['password']) . "</td></tr>";
     }
 ?></table>-->
+<!--<a href="images/swoops.jpg" class="swipebox" title="swoops">
+<img src="images/hoops.jpg" alt="image">
+</a>
+<script type="text/javascript";( function( $ ) { $( '.swipebox' ).swipebox(); } )( jQuery );
+</script>-->
 	<div id="about" class="secondTitle">About Jay and His Jewelry</div>
 	<div class="second"> 
 		<p>Jay is a student at Boise State University and intern at Micron Technology.
@@ -52,6 +61,22 @@
 	</div>
 	
 	<div id="shop" class="secondTitle"> Shop </div>
+	<div class="galleria">
+		<img src="images/hoops.jpg" data-title="HOOPS" data-description="hooooops">
+		<img src="images/loops.jpg">
+		<img src="images/droops2.jpg">-->
+		<script>
+			(function() { 
+				Galleria.loadTheme('galleria-1.5.7/galleria/themes/classic/galleria.classic.min.js');
+				Galleria.configure({
+					transition: 'fade',
+					showInfo: true,
+					fullscreenDoubleTap: true
+				});
+				Galleria.run('.galleria');
+			}());
+		</script>
+	</div>
 	<div>
 	<table style="width:100%" class="deets">
 		<tr>
@@ -59,14 +84,14 @@
 			<td align="center">HOOPS</td> 
 		</tr>
 		<tr>
-			<td align="center"><img class="inset" alt="one" src="images/one.jpg"></td>
-			<td align="center"><img class="inset" alt="two" src="images/two.jpg"></td> 
+			<td align="center"><img class="inset" alt="one" src="images/loops.jpg"></td>
+			<td align="center"><img class="inset" alt="two" src="images/hoops.jpg"></td> 
 		</tr>
 		<tr>
 			<td align="center">
 			<p class="deets">Price: $15 </p>
 			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
-			</div>
+			
 			</td>
 			<td align="center">Price: $15 </p>
 			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
@@ -77,57 +102,39 @@
 			<td align="center">DROOPS</td> 
 		</tr>
 	    <tr>
-			<td align="center"><img class="inset" alt="three" src="images/three.jpg"></td>
-			<td align="center"><img class="inset" alt="four" src="images/four.jpg"></td>
+			<td align="center"><img class="inset" alt="three" src="images/swoops.jpg"></td>
+			<td align="center"><img class="inset" alt="four" src="images/droops2.jpg"></td>
 		</tr>
 		<tr>
 			<td align="center">Price: $15 </p>
 			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
-			</div>
+			
 			</td>
 			<td align="center">Price: $15 </p>
 			<div class="popup" onclick="wow_default_alert()">I Want That!</div>
-			</div>
+			
 			</td>
 		</tr>
-	</table>
+	</table></div>
 	<div class="secondTitle" id="events">Events</div>
 	<div class="second">Watch here for upcoming events where you can see Jay out and about!</div>
 	<div class="second">Talk to him, buy some jewelry, shake his hand even...</div>
 	<div class="second"><iframe align="middle" width="100%" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23000000&amp;src=jtsmithers%40gmail.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FDenver" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>   	</div>	
-	</div>
-	<!--<div class="second" id="contact">Contact
-	<p class="second">Leave a comment or request a product</p>
-	<p class="second">Please leave a comment about Jay or his products. If there is a concern, Jay will
-	get back to you promptly.</p>
-	<p class="second">If you are requesting a product, please select the product from the drop-down.</p>
-	</div>
-	<div>
-	<form align="center" width="100%" action="comment_handler.php" method="POST">
-		<br><input placeholder="name"name="name" type="text" /><br/>
-		<br><input placeholder="email address:"name="email" type="email" /><br/>
-		<br align="middle">What product do you want??</br>
-		<br>
-			<input type="checkbox" name="product" value="LOOPS" /> LOOPS
-			<input type="checkbox" name="product" value="HOOPS" /> HOOPS
-			<input type="checkbox" name="product" value="SWOOPS" /> SWOOPS
-			<input type="checkbox" name="product" value="DROOPS" /> DROOPS
-			<textarea class="ta" rows="5" name="comment">Leave a comment!!!</textarea></br>
-			<input type="submit" value="SEND" class="submit" />
-	</form>
-	</div>
-	<table><?php
-    foreach ($comments as $comment) {
-      echo "<tr><td>" . ($comment['name']) . "  </td><td>" . ($comment['comment']) . "</td></tr>";
-    }
-?></table>-->
+	
+	
+	
+
+	
 	<footer class="footer"> 
 	<p class="copyright">© 2018 Jay String Jewelry, LLC</p>
     </footer>
-	
+
+<script src="swipebox-master/lib/jquery-2.0.3.js"></script>
+<script src="swipebox-master/src/js/jquery.swipebox.js"></script>	
 </body>
 
 </html>
 <script src="//code.jquery.com/jquery-2.1.3.js"></script>
 <script src="js/wow-alert.js"></script>
 <script>function wow_default_alert () {alert("Sorry...Out of Stock!");}</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

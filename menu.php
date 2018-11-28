@@ -11,13 +11,27 @@
 		}else{
 			echo '<a href="login.php">Login</a>'; 
 		}
+		
+		#if(basename(__FILE__) == 'register.php') {
+		#	echo '<a id="current-page" href="register.php">Register</a>';
+		#	echo '<a href="index.php#about">About</a>';
+		#	echo '<a href="index.php#shop">Shop</a>';
+		#	echo '<a href="index.php#events">Events</a>';
+		#	echo '<a href="index.php">Home</a>';
+		#} else if (basename(_FILE_) == 'index.php') {
+		#	<a href="register.php">Register</a>
+		#	<a id="current-page" href="index.php#about">About</a>
+		#	<a href="index.php#shop">Shop</a>
+		#	<a href="index.php#events">Events</a>
+		#	<a href="index.php">Home</a>
+		#}
 		?>
 		
-		<a href="register.php">Register</a>
+		<!--<a href="register.php">Register</a>
 		<a href="index.php#about">About</a>
 		<a href="index.php#shop">Shop</a>
 		<a href="index.php#events">Events</a>
 		<a href="index.php">Home</a>
-		<!--<a href="index.php#contact">Contact</a>-->
+		<a href="index.php#contact">Contact</a>-->
 	</div>
 </div>

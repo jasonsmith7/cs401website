@@ -1,0 +1,36 @@
+<script>
+var data = [
+    {
+        image: 'images/hoops.jpg',
+        thumb: 'images/hoops.jpg',
+        big: 'images/hoops.jpg',
+        title: 'Hoops',
+        description: 'hoopppss',
+        link: 'http://google.com'
+    },
+    {
+        image: 'images/swoops.jpg',
+        thumb: 'images/swoops.jpg',
+        big: 'images/swoops.jpg',
+        title: 'Swoops',
+        description: 'Swoopppss',
+        link: 'http://google.com'
+    }
+	{
+        image: 'images/droops2.jpg',
+        thumb: 'images/droops2.jpg',
+        big: 'images/droops2.jpg',
+        title: 'droops',
+        description: 'droopppss',
+        link: 'http://google.com'
+    }
+	{
+        image: 'images/loops.jpg',
+        thumb: 'images/loops.jpg',
+        big: 'images/loops.jpg',
+        title: 'loops',
+        description: 'loopppss',
+        link: 'http://google.com'
+    }
+];
+</script>

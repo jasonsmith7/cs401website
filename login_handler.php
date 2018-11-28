@@ -36,7 +36,9 @@ if (!$user){
 	#error_log(" Password from Post: " . $password);
 	error_log(" Password from Post: " . $password);
 	error_log(" Password from Dao: " . $pass);
-	if($password != $pass){
+	$passhash = hash("sha256", $password . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+	
+	if($passhash != $pass){
 		$messages[] = "Incorrect Password";
 		echo "bad password";
 		$valid = false;

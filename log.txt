@@ -225,3 +225,180 @@ now - INFO  -->  GET Password REsult: Array
     [password] => test
 )
  
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e
+)
+ 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e
+)
+ 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e
+)
+ 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e
+)
+ 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+)
+ 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+)
+ 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+)
+ 
+now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+)
+ 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a.a
+            [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 4418147118ccde16255e292c321278e2f9762a525a2abb90fb76794edb6c08ab
+)
+ 

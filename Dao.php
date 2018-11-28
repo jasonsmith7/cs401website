@@ -1,5 +1,5 @@
 <?php
-//dao.php
+//dao.php C:\wamp64\bin\mysql\mysql5.7.21\bin
 require_once 'KLogger.php';
 class Dao {
 	private $host = "us-cdbr-iron-east-01.cleardb.net";
@@ -15,16 +15,13 @@ class Dao {
 		return new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->pass);
 	}
 	
-	public function saveComment ($name, $email, $product, $comment) {
+	public function saveComment ($email, $comment) {
 		$conn = $this->getConnection();
-		$saveQuery = "INSERT INTO contact (name, email, product, comment) VALUES (:name, :email, :product, :comment)";
-		$q = $conn->prepare($saveQuery);
-		$q->bindParam(":name", $name);
-		$q->bindParam(":email", $email);
-		$q->bindParam(":product", $product);
-		$q->bindParam(":comment", $comment);
-		$q->setFetchMode(PDO::FETCH_ASSOC);
-		$q->execute();
+		$query = $conn->prepare("INSERT INTO contact (email, comment) values (:email, :comment)");
+		$query->bindParam(":email", $email);
+		$query->bindParam(":comment", $comment);
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		$query->execute();
 	}
 
 	public function login($email){
@@ -36,9 +33,9 @@ class Dao {
 		$q->execute();
 		$ret = $q->fetchAll();
 		
-		#$this->logger->logInfo(__FUNCTION__ . " " . print_r($ret,1));
+		$this->logger->logInfo(__FUNCTION__ . " " . print_r($ret,1));
 		$temp = !empty($ret);
-		#$this->logger->LogInfo("/nbool returned [{$temp}]");
+		$this->logger->LogInfo("/nbool returned [{$temp}]");
 		return !empty($ret);
 	 }
 	 public function getUser($email){
@@ -49,7 +46,7 @@ class Dao {
      $query->execute();
      $results = $query->fetch();
 		 
-     //$this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+     $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
 	 #error_log(" GET UserID REsult: " . print_r($results,true));
      return $results['email'];
 	  
@@ -61,7 +58,7 @@ class Dao {
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$query->execute();
 		$results = $query->fetch();
-		#$this->logger->LogInfo(" GET Password REsult: " . print_r($results,true));
+		$this->logger->LogInfo(" GET Password REsult: " . print_r($results,true));
 		return $results['password'];
 	}
 	public function getComments () {

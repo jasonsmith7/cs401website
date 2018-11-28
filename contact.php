@@ -1,19 +1,26 @@
-<html>
-
-<?php require_once "contact_html.html"; ?>
-<head>
-<?php //require_once "nav.php"; ?>
-<link href="style_home.css">
-<link href="contact_html.html'>
-<link rel="icon" type="image/png" href="https://png2.kisspng.com/sh/75e87d654446d3e2298e60f4dd619c15/L0KzQYm3U8IxN5R2fZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfd2caVmip9tb4fxfLFohL1ncZ1qi59wdXn3ccO0hwJmbV46edQ6MEi0QoO6VsI6O182UaUDNkOzR4K8UsE2PWI4T6o6NEWxgLBu/kisspng-computer-icons-guitar-download-files-guitar-free-5ab10812236293.193863071521551378145.png">
-<title>Jay String Jewelry - Contact</title>
-
-</head>
-<body>
-
-
-<?php echo "<body style='background-color:#FFEEAA'>";
-	  //echo '<p>Hello World</p>'; ?>
-<!--<div><img src="bg_guitar.jpeg"/></div>-->
-</body>
-</html>
+<div class="second" id="contact">
+	<p class="second">Leave a comment or request a product</p>
+	<p class="second">Please leave a comment about Jay or his products. If there is a concern, Jay will
+	get back to you promptly.</p>
+	<p class="second">If you are requesting a product, please select the product from the drop-down.</p>
+	</div>
+	<div>
+	<form align="center" width="100%" action="comment_handler.php" method="POST">
+		<br><input placeholder="email address:"name="email" type="email" /><br/>
+		<br><textarea class="ta" rows="5" name="comment">Leave a comment!!!</textarea></br>
+			<input type="submit" value="SEND" class="submit" />
+	</form>
+	</div>
+	<table><?php
+	//session_start();
+	//require_once "Dao.php";
+	//$dao = new Dao();
+   // foreach ($contact as $comment) {
+   //   echo "<tr><td>" . ($comment['name']) . "  </td><td>" . ($comment['comment']) . "</td></tr>";
+   // }
+    if(isset($_SESSION['messages'])){
+			echo "<strong class='exists'>" . $_SESSION['messages'][0] . "</strong>";
+			unset($_SESSION['messages']);
+	}
+	
+?></table>

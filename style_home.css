@@ -272,6 +272,7 @@ table,td {
 	text-align: center;
 
 }
+
 form.bg {
 	background-color:black;
 	opacity: 0.8;
@@ -329,6 +330,28 @@ textarea.ta {
 }
 .submit:hover {
     background-color: #43a09d;
+}
+
+#current-page > a {
+    text-decoration: none;
+    color: #F36900;
+    background-color: white;
+    padding: 0px 9px;
+    border: solid 1px #D1D8E1;
+    border-bottom: solid 1px white;
+    padding-bottom: 2px;
+    /* padding-top: 2px; */
+    cursor: default;
+}
+
+.exists {
+    background-color:black;
+	font-family: 'Baloo Bhaijaan', cursive;
+	opacity: 0.8;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: red;
 }
 
 .loginMessage {
@@ -405,3 +428,8 @@ textarea.ta {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+
+.galleria{ max-width: 700px; height: 400px; background: #000; margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;}

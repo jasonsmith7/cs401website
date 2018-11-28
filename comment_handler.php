@@ -2,39 +2,28 @@
 session_start();
 require_once "Dao.php";
 $dao = new Dao();
-
-$name = $_REQUEST["name"];
-$email = $_REQUEST["email"]; 
-$product = $_REQUEST["product"]; 
+$email = $_REQUEST["email"];
 $comment = $_REQUEST["comment"];
+
 
 $valid = true;
 $messages = array();
 #$user = $dao->login($email);
-
-if (empty($name)) {
-	$messages[] = "PLEASE ENTER AN ALIAS";
-	#$valid = false;
-}
 if (empty($email)) {
-	$messages[] = "PLEASE ENTER A VALID EMAIL ADDRESS";
-	#$valid = false;
-}
-if (empty($password)){
-	$messages[] = "PLEASE ENTER A PASSWORD";
-	#$valid = false;
+	$messages[] = "PLEASE ENTER A COMMENT";
+	$valid = false;
 }
 if (empty($comment)) {
 	$messages[] = "PLEASE ENTER A COMMENT";
-	#$valid = false;
+	$valid = false;
 }
 if ($valid) {
-	$dao->saveComment ($name, $email, $product, $comment);
-	$messages[] = "User $email Created";
+	$dao->saveComment ($email, $comment);
+	$messages[] = "Your Comment Has Been Submitted";
 	$_SESSION['currentUser'] = $email;
 	$valid = true;
 }else{
-	#$messages[] = "Account already associated with $username";
+	#$messages[] = "YOU MUST ENTER YOUR EMAIL AND A COMMENT TO SUBMIT";
 	$valid = false;
   }
 /* Form Required Field Validation */

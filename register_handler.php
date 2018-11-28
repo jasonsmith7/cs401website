@@ -18,12 +18,13 @@ if (empty($password)){
 	$valid = false;
 }
 if (!$user) {
-	$dao->createUser($email, $password);
+	$passhash = hash("sha256", $password . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+	$dao->createUser($email, $passhash);
 	$messages[] = "User $email Created";
 	$_SESSION['currentUser'] = $email;
 	$valid = true;
 }else{
-	$messages[] = "Account already associated with $username";
+	$messages[] = "Account already associated with $email";
 	$valid = false;
   }
 /* Form Required Field Validation */
