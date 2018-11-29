@@ -37,7 +37,7 @@ h1 > img{
 	font-size: 16pt;
 	color: white;
     /*background-color: black;*/
-	/*position: relative;*/
+	/*position: absolute;*/
 	
 	padding-bottom: 40px;
 	margin: 0 auto -40px;
@@ -68,6 +68,8 @@ h1 > img{
 }
 
 .dropbtn{
+	position: -webkit-sticky;
+    position: fixed;
 	background-color: black;
 	width: 150px;
 	color: white;
@@ -78,17 +80,20 @@ h1 > img{
 }
 .dropdown{
 	float: right;
-	position: absolute;
+	position: -webkit-sticky;
+    position: fixed;
 	display: inline-block;
 	width: 25%;
+	z-index: 5;
 	font-family: 'Fredoka One', cursive;
 }
 .dropdown-content{
 	display: none;
-	position: absolute;
+	position: -webkit-sticky;
+    position: fixed;
 	background-color: black;
 	width: 150px;
-	z-index: 1;
+	z-index: 5;
 }
 .dropdown-content a {
     color: white;
@@ -297,6 +302,7 @@ div.sticky {
 	color:white;
     padding: 10px;
     font-size: 20px;
+	z-index: 5;
 }
 
 

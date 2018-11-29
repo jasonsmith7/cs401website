@@ -27,11 +27,11 @@
 		#}
 		?>
 		
-		<!--<a href="register.php">Register</a>
+		<a href="register.php">Register</a>
 		<a href="index.php#about">About</a>
 		<a href="index.php#shop">Shop</a>
 		<a href="index.php#events">Events</a>
 		<a href="index.php">Home</a>
-		<a href="index.php#contact">Contact</a>-->
+		<!--<a href="index.php#contact">Contact</a>-->
 	</div>
 </div>
