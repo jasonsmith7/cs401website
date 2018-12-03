@@ -16,12 +16,21 @@
 	
 </head>
 <header id="home"><title></title>
-	<?php
-	include("menu.php");
-	?>
+	<div class="dropdown">
+	<button class="dropbtn">Menu</button>
+	<div class="dropdown-content">
+		<div id="current-page"><a href="index.php">Home</a></div>
+		<a href="register.php">Register</a>
+		<a href="login.php">Log-In</a>
+		<a href="index.php#about">About</a>
+		<a href="index.php#shop">Shop</a>
+		<a href="index.php#events">Events</a>
+	</div>
+</div>
+
 </header>
 <h1>
-	<p class="title"><img src="images/JSJlogo.png" align="middle" width="40%" alt="logo"></p>
+	<p class="title"><img src="images/JSJlogo.png" align="middle" width="50%" alt="logo"></p>
 </h1>
 <div class="second"><?php 
 		if (!empty($_SESSION['sentiment'])) {
@@ -40,7 +49,6 @@
 		?></div>
 <div class="sticky"><a href="#home">Back to Top</a></div>
 <body class ="body">
-
 	<div id="about" class="secondTitle">About Jay and His Jewelry</div>
 	<div class="second"> 
 		<p>Jay is a student at Boise State University and intern at Micron Technology.
@@ -61,11 +69,7 @@
 		<script>
 			(function() { 
 				Galleria.loadTheme('galleria-1.5.7/galleria/themes/classic/galleria.classic.min.js');
-				Galleria.configure({
-					transition: 'fade',
-					showInfo: true,
-					fullscreenDoubleTap: true
-				});
+				Galleria.configure({transition: 'fade', showInfo: true, fullscreenDoubleTap: true});
 				Galleria.run('.galleria');
 			}());
 		</script>

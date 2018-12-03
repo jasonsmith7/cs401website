@@ -5,22 +5,23 @@
 	<p class="second">If you are requesting a product, please select the product from the drop-down.</p>
 	</div>
 	<div>
+
 	<form align="center" width="100%" action="comment_handler.php" method="POST">
 		<br><input placeholder="email address:"name="email" type="email" /><br/>
 		<br><textarea class="ta" rows="5" name="comment">Leave a comment!!!</textarea></br>
-			<input type="submit" value="SEND" class="submit" />
+		<input type="submit" value="SEND" class="submit" />
 	</form>
 	</div>
-	<table><?php
-	//session_start();
-	//require_once "Dao.php";
-	//$dao = new Dao();
-   // foreach ($contact as $comment) {
-   //   echo "<tr><td>" . ($comment['name']) . "  </td><td>" . ($comment['comment']) . "</td></tr>";
-   // }
-    if(isset($_SESSION['messages'])){
-			echo "<strong class='exists'>" . $_SESSION['messages'][0] . "</strong>";
-			unset($_SESSION['messages']);
-	}
+	<!--<table><?php
+	#session_start();
+	#require_once "Dao.php";
+	#$dao = new Dao();
+   # foreach ($contact as $comment) {
+   # echo "<tr><td>" . ($comment['email']) . "  </td><td>" . ($comment['comment']) . "</td></tr>";
+   # }
+    //if(isset($_SESSION['messages'])){
+		//	echo "<strong class='exists'>" . $_SESSION['messages'][0] . "</strong>";
+			//unset($_SESSION['messages']);
+	//}
 	
-?></table>
+?></table>-->

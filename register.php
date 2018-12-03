@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+$thisPage = "register";
 
 
 if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
