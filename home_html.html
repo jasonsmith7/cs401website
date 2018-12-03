@@ -39,6 +39,11 @@
 				echo "<p><strong>" . 'Hello ' . $email . '. You are welcome for being here!' . "</strong></p>";
 				echo '<a href="logout.php">LOGOUT</a>';
 				include("contact.php");
+			}else if($_SESSION["sentiment"] == "great") {
+				$email = $_SESSION["currentUser"];
+				echo "<p><strong>" . 'Hello ' . $email . '. Thanks for your comment! I love you!!!' . "</strong></p>";
+				echo '<a href="logout.php">LOGOUT</a>';
+				include("contact.php");
 			}else{
 				echo "<p><strong>" . 'Not Logged In' . "</strong></p>";
 				echo '<a href="login.php">Login</a>';

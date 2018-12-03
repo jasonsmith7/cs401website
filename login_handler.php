@@ -5,6 +5,7 @@ require_once "Dao.php";
 
 $dao = new Dao();
 $email = $_REQUEST["email"]; 
+$email = filter_var($email,FILTER_SANITIZE_EMAIL);
 $password = $_REQUEST["password"];
 $user = $dao->login($email);
 $_SESSION["email_preset"] = $_POST["email"];

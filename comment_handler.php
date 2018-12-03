@@ -3,8 +3,9 @@ session_start();
 require_once "Dao.php";
 $dao = new Dao();
 $email = $_REQUEST["email"];
+$email = filter_var($email,FILTER_SANITIZE_EMAIL);
 $comment = $_REQUEST["comment"];
-
+$comment = filter_var($comment,FILTER_SANITIZE_STRING);
 
 $valid = true;
 $messages = array();
@@ -29,14 +30,14 @@ if ($valid) {
 /* Form Required Field Validation */
 foreach($_POST as $key=>$value) {
 	if(empty($_POST[$key])) {
-	$error_message = "All Fields are required";
+		$error_message = "All Fields are required";
 	break;
 	}
 }
 /* Email Validation */
 if(!isset($error_message)) {
 	if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-	$error_message = "Invalid Email Address";
+		$error_message = "Invalid Email Address";
 	}
 	header("Location:index.php");
 }
@@ -47,7 +48,7 @@ if (!$valid) {
 	header("Location: index.php");
 	exit;
 }
-$_SESSION['sentiment'] = "good";
+$_SESSION['sentiment'] = "great";
 header("Location:index.php");
 exit;
 ?>

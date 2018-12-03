@@ -493,3 +493,61 @@ now - INFO  --> login Array
 )
  
 now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+)
+ 
+now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => a@a
+            [password] => 3f2b953b5f6b4e9e44e454cbe948bbc6db0c40ce61606b8a46a79f4a518202d1
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 3f2b953b5f6b4e9e44e454cbe948bbc6db0c40ce61606b8a46a79f4a518202d1
+)
+ 
+now - INFO  --> login Array
+(
+)
+ 
+now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => john@john
+            [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+)
+ 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => john@john
+            [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+)
+ 

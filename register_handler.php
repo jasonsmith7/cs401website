@@ -3,7 +3,8 @@ session_start();
 require_once "Dao.php";
 $dao = new Dao();
 
-$email = $_REQUEST["email"]; 
+$email = $_REQUEST["email"];
+$email = filter_var($email,FILTER_SANITIZE_EMAIL); 
 $password = $_REQUEST["password1"];
 $password2 = $_REQUEST["password2"]; 
 $valid = true;
@@ -46,7 +47,7 @@ foreach($_POST as $key=>$value) {
 	break;
 	}
 }
-/* Email Validation */
+/* Email Validation and Sanitization */
 if(!isset($error_message)) {
 	if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 	$error_message = "Invalid Email Address";
