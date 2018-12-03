@@ -4,7 +4,8 @@ require_once "Dao.php";
 $dao = new Dao();
 
 $email = $_REQUEST["email"]; 
-$password = $_REQUEST["password"]; 
+$password = $_REQUEST["password1"];
+$password2 = $_REQUEST["password2"]; 
 $valid = true;
 $messages = array();
 $user = $dao->login($email);
@@ -16,8 +17,19 @@ if (empty($email)) {
 if (empty($password)){
 	$messages[] = "PLEASE ENTER A PASSWORD";
 	$valid = false;
+	$_SESSION["email_preset"] = $email;
 }
-if (!$user) {
+if (strlen($password) < 8) {
+	$messages[] = "PASSWORD MUST BE AT LEAST 8 CHARACTERS LONG";
+	$valid = false;
+	$_SESSION["email_preset"] = $email;
+}
+if ($password != $password2) {
+	$messages[] = "PASSWORDS DO NOT MATCH";
+	$valid = false;
+	$_SESSION["email_preset"] = $email;
+}
+if (!$user && $valid) {
 	$passhash = hash("sha256", $password . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
 	$dao->createUser($email, $passhash);
 	$messages[] = "User $email Created";
@@ -45,6 +57,7 @@ if(!isset($error_message)) {
 if (!$valid) {
 	$_SESSION['sentiment'] = "bad";
 	$_SESSION['messages'] = $messages;
+	$_SESSION["email_preset"] = $email;
 	header("Location: register.php");
 	exit;
 }

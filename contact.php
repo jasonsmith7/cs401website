@@ -13,8 +13,10 @@
 	<div>
 
 	<form align="center" width="100%" action="comment_handler.php" method="POST">
+		<label for="email">Email</label>
 		<br><input placeholder="email address:"name="email" type="email" value="<?php echo $email; ?>" /><br/>
-		<br><textarea class="ta" rows="5" name="comment">Leave a comment!!!</textarea></br>
+		<label for="comment">Comment/Request</label>
+		<br><textarea class="ta" rows="5" name="comment">Leave a comment or item request!!!</textarea></br>
 		<input type="submit" value="SEND" class="submit" />
 	</form>
 	<div>If you need to pay Jay, please do so through Venmo! Here is his info:</div>

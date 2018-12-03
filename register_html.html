@@ -1,3 +1,8 @@
+<?php
+  $email = "";
+  if (isset($_SESSION["email_preset"])) {
+    $email = $_SESSION["email_preset"];
+  }?>
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,15 +32,21 @@
 <body class="body">
         <div class="second"><form method ="POST" align="center" name="register" action="register_handler.php">
             <label for="email">Email</label>
-            <div><input type="email" placeholder="123@gmail.com" required class="input" name="email" id="emailID" value=""/></div>
-            <label for="password">Password</label>
-            <div><input type="password" placeholder="password" id="pword" required class="input" name="password" value="<?php echo isset($_SESSION['presets']['comment']) ? $_SESSION['presets']['comment'] : ''; ?>"/></div>
-            <p class="buy_button"><input type="submit" value="Submit" name="submit"></p>
-		<div class="exists"><?php if(isset($_SESSION['messages'])){
-			echo "<strong class='error'>" . $_SESSION['messages'][0] . "</strong>";
-			unset($_SESSION['messages']);
-	}
-	?></div>
+            <div><input type="email" placeholder="123@gmail.com" required class="input" name="email" id="emailID" value="<?php echo $email; ?>"/></div>
+            
+			<label for="password">Password</label>
+            <div><input type="password" placeholder="password1" id="pword" required class="input" name="password1" value="<?php echo isset($_SESSION['presets']['comment']) ? $_SESSION['presets']['comment'] : ''; ?>"/></div>
+            
+			<label for="password">Re-enter your password</label>
+			<div><input type="password" placeholder="password2" id="pword" required class="input" name="password2" value="<?php echo isset($_SESSION['presets']['comment']) ? $_SESSION['presets']['comment'] : ''; ?>"/></div>
+			
+			<p class="buy_button"><input type="submit" value="Submit" name="submit"></p>
+			<div class="exists">
+				<?php if(isset($_SESSION['messages'])){
+					echo "<strong class='error'>" . $_SESSION['messages'][0] . "</strong>";
+					unset($_SESSION['messages']);
+				}
+			?></div>
 	<p class="signin">Already have an account? <a href="login.php">Sign in</a>.</p>
 		</form>
     
