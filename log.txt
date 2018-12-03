@@ -422,3 +422,24 @@ now - INFO  --> login Array
 )
  
 now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+)
+ 
+now - INFO  --> /nbool returned [] 
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => j@j
+            [password] => 643495613aba0fe2d24e51280256566100c6df49c9fe9bd24c831d92196062cf
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 643495613aba0fe2d24e51280256566100c6df49c9fe9bd24c831d92196062cf
+)
+ 
