@@ -23,16 +23,3 @@
 	
 	<img class="inset" alt="venmo" src="images/venmo.jpg">
 	</div>
-	<!--<table><?php
-	#session_start();
-	#require_once "Dao.php";
-	#$dao = new Dao();
-   # foreach ($contact as $comment) {
-   # echo "<tr><td>" . ($comment['email']) . "  </td><td>" . ($comment['comment']) . "</td></tr>";
-   # }
-    //if(isset($_SESSION['messages'])){
-		//	echo "<strong class='exists'>" . $_SESSION['messages'][0] . "</strong>";
-			//unset($_SESSION['messages']);
-	//}
-	
-?></table>-->
