@@ -551,3 +551,19 @@ now - INFO  -->  GET Password REsult: Array
     [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
 )
  
+now - INFO  --> login Array
+(
+    [0] => Array
+        (
+            [email] => beyonce@mail.com
+            [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+        )
+
+)
+ 
+now - INFO  --> /nbool returned [1] 
+now - INFO  -->  GET Password REsult: Array
+(
+    [password] => 63e8c7dc6e9f69b13296e82a5d7d2dfb29f91554406059c09be940e81a4d9283
+)
+ 

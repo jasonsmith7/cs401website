@@ -20,7 +20,8 @@
 		<input type="submit" value="SEND" class="submit" />
 	</form>
 	<div>If you need to pay Jay, please do so through Venmo! Here is his info:</div>
-	<img src="images/venmo.png">
+	
+	<img class="inset" alt="venmo" src="images/venmo.png">
 	</div>
 	<!--<table><?php
 	#session_start();
