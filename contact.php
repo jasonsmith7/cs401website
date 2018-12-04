@@ -21,7 +21,7 @@
 	</form>
 	<div>If you need to pay Jay, please do so through Venmo! Here is his info:</div>
 	
-	<img class="inset" alt="venmo" src="images/venmo.png">
+	<img class="inset" alt="venmo" src="images/venmo.jpg">
 	</div>
 	<!--<table><?php
 	#session_start();
