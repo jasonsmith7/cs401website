@@ -19,7 +19,7 @@ if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
 <head>
 <link href="style_home.css">
 <link href="register_html.html">
-<link rel="icon" href="favi.png">
+<link rel="icon" href="favicon.ico">
 <title>Jay String Jewelry - Register</title>
 </head>
 <body>

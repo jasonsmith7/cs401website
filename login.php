@@ -21,7 +21,7 @@ $thisPage = "login";
 <head>
 <link href="style_home.css">
 <link href="login_html.html">
-<link rel="icon" href="favi.png">
+<link rel="icon" href="favicon.ico">
 <title>Jay String Jewelry - Log In</title>
 </head>
 <body>

@@ -10,7 +10,7 @@ $comments = $dao->getComments();
 <head>
 <link href="style_home.css">
 <link href="home_html.html">
-<link rel="icon" href="favi.png">
+<link rel="icon" href="favicon.ico">
 <title>Jay String Jewelry - Home</title>
 <body>
 <?php echo "<body style='background-color:black'>";?>
